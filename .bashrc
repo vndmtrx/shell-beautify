@@ -1,6 +1,10 @@
 ### Customização do prompt de comando do shell Bash
 ### Eduardo Rolim
 
+## Alias para um comando mais humanizado de uso do shell
+
+alias please="sudo"
+
 ## Carrega o arquivo git-prompt.sh baixado do repositório:
 ## https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
 source ~/git-prompt.sh
