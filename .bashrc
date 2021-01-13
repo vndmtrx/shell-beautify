@@ -7,16 +7,18 @@ alias please="sudo"
 
 ## Carrega o arquivo git-prompt.sh baixado do repositório:
 ## https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
-source ~/git-prompt.sh
+source ~/.bin/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWUPSTREAM="verbose"
 
-# retorna o código de retorno do ultimo comando com erro
+# retorna emoji com código de erro, ou emoji aleatório
+EMOJIS=(😺 😸 🙀 🥳 🥶 🥵 👾 🤖 🎃 🤯 🤟 🤙 💅 👏 👍 🐞 🐧 🥇 🚀 💖 🏳️‍🌈 🎮)
+
 function ultimo_ret() {
 	RETVAL=$?
-	[ $RETVAL -ne 0 ] && echo "🚨$RETVAL "
+	[ $RETVAL -ne 0 ] && echo "🤬$RETVAL " || echo "${EMOJIS[$RANDOM % ${#EMOJIS[@]}]} "
 }
 
 C_R="\[\e[m\]"		#Reset de Cor
