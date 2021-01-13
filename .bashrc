@@ -16,7 +16,7 @@ export GIT_PS1_SHOWUPSTREAM="verbose"
 # retorna o código de retorno do ultimo comando com erro
 function ultimo_ret() {
 	RETVAL=$?
-	[ $RETVAL -ne 0 ] && echo "$RETVAL "
+	[ $RETVAL -ne 0 ] && echo "🚨$RETVAL "
 }
 
 C_R="\[\e[m\]"		#Reset de Cor
