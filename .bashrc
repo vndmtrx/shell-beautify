@@ -25,7 +25,7 @@ C_R="\[\e[m\]"		#Reset de Cor
 C_1="\[\e[01;31m\]"	#Vermelho Vivo
 C_2="\[\e[33m\]"	#Amarelo
 C_3="\[\e[32m\]"	#Verde
-C_4="\[\e[01;34m\]"	#Azul Claro
+C_4="\[\e[36m\]"	#Ciano
 C_5="\[\e[01;35m\]"	#Roxo
 
 PS1_TTL="\[\e]0;\u@\h:\w\a\]"
