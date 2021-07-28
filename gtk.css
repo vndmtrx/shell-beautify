@@ -1,0 +1,33 @@
+/* ~/.config/gtk-3.0/gtk.css */
+/* Lista plugins: xfconf-query -c xfce4-panel -p /plugins -lv */
+/* Recarrega XFCE: xfce4-panel -r */
+/* GTK Theming para o XFCE: https://docs.xfce.org/xfce/xfce4-panel/theming */
+
+#whiskermenu-button* {
+    -gtk-icon-transform: scale(0.50);
+}
+
+#showdesktop-button*, /* Ícone de mostrar o desktop */
+#launcher-arrow* /* Lançadores de Aplicativos */
+{
+    -gtk-icon-transform: scale(0.56);
+    padding: 0 0px;
+}
+
+#xfce4-notification-plugin*, /* Ícone de Notificações */
+#xfce4-clipman-plugin*, /* Ícone do Gerenciador do Clipboard */
+#xfce-panel-toggle-button*, /* Ícones da Bandeja de Status */
+#pulseaudio-button*, /* Ícone do Controle de Volume */
+#xfce4-power-manager-plugin* /* Ícone do Gerenciamento de Energia */
+{
+    -gtk-icon-transform: scale(0.50);
+}
+
+wnck-pager* /* Alternador das Áreas de Trabalho */
+{
+    -gtk-icon-transform: scale(0.50);
+}
+
+#clock-button* {
+    font-weight: bold;
+}
