@@ -14,11 +14,12 @@ export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWUPSTREAM="verbose"
 
 # retorna emoji com código de erro, ou emoji aleatório
-EMOJIS=(😺 😸 🙀 🥳 🥶 🥵 👾 🤖 🎃 🤯 🤟 🤙 💅 👏 👍 🐞 🐧 🥇 🚀 💖 🌈 🎮 🐳 🐍 🐘 🐈 🦄 🐬 💣)
+#EMOJIS=(😺 😸 🙀 🥳 🥶 🥵 👾 🤖 🎃 🤯 🤟 🤙 💅 👏 👍 🐞 🐧 🥇 🚀 💖 🌈 🎮 🐳 🐍 🐘 🐈 🦄 🐬 💣)
 
 function ultimo_ret() {
 	RETVAL=$?
-	[ $RETVAL -ne 0 ] && echo "🤬$RETVAL " || echo "${EMOJIS[$RANDOM % ${#EMOJIS[@]}]} "
+#	[ $RETVAL -ne 0 ] && echo "🤬$RETVAL " || echo "${EMOJIS[$RANDOM % ${#EMOJIS[@]}]} "
+	[ $RETVAL -ne 0 ] && echo "🛑$RETVAL "
 }
 
 C_R="\[\e[m\]"		#Reset de Cor
