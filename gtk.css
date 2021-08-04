@@ -2,6 +2,7 @@
 /* Lista plugins: xfconf-query -c xfce4-panel -p /plugins -lv */
 /* Recarrega XFCE: xfce4-panel -r */
 /* GTK Theming para o XFCE: https://docs.xfce.org/xfce/xfce4-panel/theming */
+/* Tema para uso com o painel horizontal configurado para 48px de tamanho da linha */
 
 #whiskermenu-button* {
     -gtk-icon-transform: scale(0.50);
