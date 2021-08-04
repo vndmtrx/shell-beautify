@@ -30,4 +30,6 @@ wnck-pager* /* Alternador das Áreas de Trabalho */
 
 #clock-button* {
     font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
 }
