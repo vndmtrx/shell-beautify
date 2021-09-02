@@ -4,6 +4,7 @@
 ## Alias para um comando mais humanizado de uso do shell
 
 alias please="sudo"
+alias tb="(exec 3<>/dev/tcp/termbin.com/9999; cat >&3; cat <&3; exec 3<&-)"
 
 ## Carrega o arquivo git-prompt.sh baixado do repositório:
 ## https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
