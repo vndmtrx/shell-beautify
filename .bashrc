@@ -3,7 +3,10 @@
 
 ## Alias para um comando mais humanizado de uso do shell
 
-alias please="sudo"
+alias please="sudo `fc -ln -1`"
+
+## Alias para criação de pastebin de informações do terminal
+## Sintaxe: cat ~/arquivo.txt | tb
 alias tb="(exec 3<>/dev/tcp/termbin.com/9999; cat >&3; cat <&3; exec 3<&-)"
 
 ## Carrega o arquivo git-prompt.sh baixado do repositório:
