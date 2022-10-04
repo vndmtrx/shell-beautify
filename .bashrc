@@ -1,13 +1,21 @@
 ### Customização do prompt de comando do shell Bash
 ### Eduardo Rolim
 
-## Alias para um comando mais humanizado de uso do shell
+## Configurações do histórico do Bash
+HISTFILESIZE=5000000
+HISTSIZE=10000
+HISTCONTROL=ignoreboth
+HISTIGNORE='history:sudo*:please*:fuck'
+shopt -s histappend
 
-alias please="sudo `fc -ln -1`"
+## Alias para comandos mais humanizados de uso do shell
 
-## Alias para criação de pastebin de informações do terminal
-## Sintaxe: cat ~/arquivo.txt | tb
-alias tb="(exec 3<>/dev/tcp/termbin.com/9999; cat >&3; cat <&3; exec 3<&-)"
+alias please='sudo '
+alias fuck='sudo `history -p \!\!`'
+
+## Alias para criação de termbin de informações do terminal
+## Sintaxe: cat ~/arquivo.txt | termbin
+alias termbin="(exec 3<>/dev/tcp/termbin.com/9999; cat >&3; cat <&3; exec 3<&-)"
 
 ## Carrega o arquivo git-prompt.sh baixado do repositório:
 ## https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
@@ -17,12 +25,8 @@ export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWUPSTREAM="verbose"
 
-# retorna emoji com código de erro, ou emoji aleatório
-#EMOJIS=(😺 😸 🙀 🥳 🥶 🥵 👾 🤖 🎃 🤯 🤟 🤙 💅 👏 👍 🐞 🐧 🥇 🚀 💖 🌈 🎮 🐳 🐍 🐘 🐈 🦄 🐬 💣)
-
 function ultimo_ret() {
 	RETVAL=$?
-#	[ $RETVAL -ne 0 ] && echo "🤬$RETVAL " || echo "${EMOJIS[$RANDOM % ${#EMOJIS[@]}]} "
 	[ $RETVAL -ne 0 ] && echo "🛑$RETVAL "
 }
 
@@ -42,3 +46,5 @@ PS1_DVCS="$C_5\`__git_ps1 \" (%s)\"\`$C_R"
 
 ## Usando \`cmd\` no lugar de $(cmd) pois com o último o comando só carrega durante o source do .bashrc
 export PS1="\n[$PS1_TTL$PS1_RET$PS1_TIME $PS1_USR_HST:$PS1_PWD$PS1_DVCS]\n\\$ "
+
+fortune | cowsay | lolcat
