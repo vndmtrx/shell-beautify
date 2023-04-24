@@ -1,0 +1,25 @@
+[global_config]
+  tab_position = bottom
+  scroll_tabbar = True
+  link_single_click = True
+  title_at_bottom = True
+[keybindings]
+[profiles]
+  [[default]]
+    background_color = "#282828"
+    background_darkness = 0.9
+    background_type = transparent
+    foreground_color = "#ebdbb2"
+    palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:>
+    title_transmit_bg_color = "#33d17a"
+    title_inactive_fg_color = "#ffffff"
+    title_inactive_bg_color = "#ed333b"
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
